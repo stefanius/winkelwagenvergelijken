@@ -19,13 +19,12 @@ class AppKernel extends Kernel
             new Braincrafted\Bundle\BootstrapBundle\BraincraftedBootstrapBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
-            //new JMS\DiExtraBundle\JMSDiExtraBundle($this),
-            //new JMS\AopBundle\JMSAopBundle(),
             new JMS\SerializerBundle\JMSSerializerBundle(),
-            new Stef\BVBundle\StefBVBundle(),
-            new Stef\GenerateFixturesBundle\StefGenerateFixturesBundle(),
-            new Stef\BVAdminBundle\StefBVAdminBundle(),
             new Ivory\CKEditorBundle\IvoryCKEditorBundle(),
+
+            //Stef
+            new Stef\GenerateFixturesBundle\StefGenerateFixturesBundle(),
+            new Stef\ShopBundle\StefShopBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
